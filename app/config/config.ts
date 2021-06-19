@@ -5,7 +5,7 @@ let env = process.env.NODE_ENV || 'development';
 export let settings: Config = {
   name: 'kaamebot_customapis',
   version: '1.0.0',
-  port: 8081,
+  port: process.env.PORT || 8081,
   env: 'dev'
 };
 
