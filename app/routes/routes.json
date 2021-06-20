@@ -22,5 +22,11 @@
 		"endpoint": "aga",
 		"quotesfile": "aga",
 		"source": "Alexandre Galerne"
+	},
+	{
+		"description": "Return a random quote from \"OSS 117\"",
+		"endpoint": "oss",
+		"quotesfile": "oss",
+		"source": "OSS 117"
 	}
 ]

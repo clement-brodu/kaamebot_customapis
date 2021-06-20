@@ -4,23 +4,24 @@ Expose custom quotes APIs for Kaamebot usage (https://github.com/clement-brodu/k
 
 ## APIs
 
-- DevQuotes quotes from https://github.com/arnellebalane/devquote
-- Classe Américaine from https://fr.wikiquote.org/
-- Haddock from https://fr.wikipedia.org/wiki/Vocabulaire_du_capitaine_Haddock?veaction=edit
+-   DevQuotes quotes from https://github.com/arnellebalane/devquote
+-   Classe Américaine from https://fr.wikiquote.org/
+-   Haddock from https://fr.wikipedia.org/wiki/Vocabulaire_du_capitaine_Haddock?veaction=edit
+-   OSS 177 from https://www.kaakook.fr/
 
 ## Technical
 
 This project use :
 
-- Typescript <3
-- Restify (https://github.com/restify/node-restify)
-- bunyan (https://github.com/trentm/node-bunyan)
+-   Typescript <3
+-   Restify (https://github.com/restify/node-restify)
+-   bunyan (https://github.com/trentm/node-bunyan)
 
 ## TODOs
 
-- [ ] Testing
-- [ ] Cloud deployement (test)
-- [ ] Error handling
+-   [ ] Testing
+-   [ ] Cloud deployement (test)
+-   [ ] Error handling
 
 ## Usage
 
@@ -54,7 +55,7 @@ This project use :
 
 It's possible to simply add generic API witch use a JSON Database.
 
-- Add your database at JSON format in `datas` folder. It must use the following schema :
+-   Add your database at JSON format in `datas` folder. It must use the following schema :
 
 ```json
 [
@@ -70,18 +71,18 @@ It's possible to simply add generic API witch use a JSON Database.
 ]
 ```
 
-- Register your new API in `routes/routes.json` file on the following format :
+-   Register your new API in `routes/routes.json` file on the following format :
 
 ```json
 {
-  "description": "A tiny description of the api",
-  "endpoint": "example",
-  "quotesfile": "example",
-  "source": "Example Test"
+	"description": "A tiny description of the api",
+	"endpoint": "example",
+	"quotesfile": "example",
+	"source": "Example Test"
 }
 ```
 
-- Reboot the server, it's donne, your API is deploy at `/api/example` it randomly read a quote of `/datas/example.json` file and send this :
+-   Reboot the server, it's donne, your API is deploy at `/api/example` it randomly read a quote of `/datas/example.json` file and send this :
 
 ```json
 {
@@ -95,27 +96,27 @@ It's possible to simply add generic API witch use a JSON Database.
 
 If you need more control of the API and how it retrieve quotes, you can add custom routes that use custom controllers:
 
-- Add custom route in `routes/customs` for example :
+-   Add custom route in `routes/customs` for example :
 
 ```typescript
 import * as restify from 'restify';
 import CustomApiController from '../controllers/CustomApiController';
 
 function customApi(api: restify.Server) {
-  // Custom Api, controlled by custom constroller
-  let routeCtrl = new CustomApiController();
-  api.get(
-    '/api/customapi',
-    (req: restify.Request, res: restify.Response, next: restify.Next) =>
-      routeCtrl.get(req, res, next)
-  );
+	// Custom Api, controlled by custom constroller
+	let routeCtrl = new CustomApiController();
+	api.get(
+		'/api/customapi',
+		(req: restify.Request, res: restify.Response, next: restify.Next) =>
+			routeCtrl.get(req, res, next)
+	);
 }
 
 module.exports.routes = customApi;
 ```
 
-- Add your custom controller in `controllers` folder :
+-   Add your custom controller in `controllers` folder :
 
 ## Thanks
 
-- Thanks to https://github.com/sulhome/restify-typescript-seed for the seed and the inspiration :)
+-   Thanks to https://github.com/sulhome/restify-typescript-seed for the seed and the inspiration :)
