@@ -28,5 +28,11 @@
 		"endpoint": "oss",
 		"quotesfile": "oss",
 		"source": "OSS 117"
+	},
+	{
+		"description": "Return a random quote from \"Les Visiteurs\"",
+		"endpoint": "visiteurs",
+		"quotesfile": "visiteurs",
+		"source": "Les Visiteurs"
 	}
 ]

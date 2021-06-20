@@ -8,6 +8,7 @@ Expose custom quotes APIs for Kaamebot usage (https://github.com/clement-brodu/k
 -   Classe Américaine from https://fr.wikiquote.org/
 -   Haddock from https://fr.wikipedia.org/wiki/Vocabulaire_du_capitaine_Haddock?veaction=edit
 -   OSS 177 from https://www.kaakook.fr/
+-   Les Visiteurs from https://www.kaakook.fr/
 
 ## Technical
 
